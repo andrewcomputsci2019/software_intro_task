@@ -28,5 +28,9 @@ def generate_launch_description():
         name='teleop_py_node',
         parameters=[teleop_py_dir]
     )
+    joy_node = Node(package='joy',
+                    executable='joy_node',
+                    output='both',
+                    parameters=[teleop_py_dir])
 
-    return LaunchDescription([teleop_py_node])
+    return LaunchDescription([teleop_py_node,joy_node])

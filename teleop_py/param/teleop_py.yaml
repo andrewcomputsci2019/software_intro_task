@@ -1,3 +1,11 @@
-/**:
+teleop_py_node:
   ros__parameters:
-    use_sim_time: True
+    Steering: 0
+    Brake: 2
+    Throttle: 5
+    EstopButton: 0
+
+joy_node:
+  ros__parameters:
+    sticky_buttons: True
+    autorepeat_rate: 10.0
